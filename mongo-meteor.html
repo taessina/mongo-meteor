@@ -1,0 +1,30 @@
+<head>
+  <title>Insert new value</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Insert new value</h1>
+      <form class="new-value">
+        <input type="number" name="value" value='0'/>
+      </form>
+    </header>
+
+    {{> chart}}
+
+    <ul>
+      {{#each values}}
+        {{> value}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="value">
+  <li>{{percentage}}</li>
+</template>
+
+<template name='chart'>
+  <div id='chart'></div>
+</template>
